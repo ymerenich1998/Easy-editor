@@ -72,7 +72,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Easy Image Editor"))
         self.btn_dir.setText(_translate("MainWindow", "Папка"))
         self.lb_image.setText(_translate("MainWindow", "Картинка"))
         self.btn_left.setText(_translate("MainWindow", "Вліво"))
