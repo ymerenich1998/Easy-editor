@@ -1,10 +1,8 @@
 import sys
 import os
-from PyQt5.QtCore import QUrl, Qt
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from ui import Ui_MainWindow
-from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
 from PIL import Image
 
@@ -53,8 +51,10 @@ class Widget(QMainWindow):
     def configure(self):
         self.workdir = ""
         self.workimage = ImageProcessor(self.ui.lb_image)
+        
         self.ui.btn_dir.clicked.connect(self.open_dir)
         self.ui.lw_files.currentRowChanged.connect(self.show_chosen_image)
+        self.ui.btn_bw.clicked.connect(self.workimage.do_bw)
         
     
     def open_dir(self):

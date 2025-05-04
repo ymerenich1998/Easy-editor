@@ -37,6 +37,7 @@ class Ui_MainWindow(object):
         self.lb_image = QtWidgets.QLabel(self.horizontalLayoutWidget)
         self.lb_image.setEnabled(True)
         self.lb_image.setMinimumSize(QtCore.QSize(0, 400))
+        self.lb_image.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.lb_image.setObjectName("lb_image")
         self.col2.addWidget(self.lb_image)
         self.row_tools = QtWidgets.QHBoxLayout()
